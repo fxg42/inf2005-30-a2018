@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- le head qui les méta données du document -->
+    <title>Titre dans l'onglet</title>
+  </head>
+  <body>
+    <!-- les commentaires sont préservés et visible dans le fureteur -->
+    <!-- le body contient le contenu du document -->
+    <h1>Grand titre</h1>
+
+    <!--
+      Les éléments qui se placent de haut en bas (p.e. <div>, <p>, <h1>, <ul>) sont dits "block"
+      Les éléments qui se déplacent de gauche à droite (le texte, <span>, <a>, <em>, <strong> sont dits "inline"
+    -->
+    <p>
+    
+      <em>Visitez</em> le 
+      <!-- un lien externe -->
+      <!-- "href" est un attribut. Sa valeur est donnée entre guillemets -->
+      <!-- &apos; est une entité qui représente une apostrophe -->
+      <!-- &Agrave; est un "À" ... &agrave; serait "à" -->
+      <!-- voir https://dev.w3.org/html5/html-author/charref -->
+      <a href="http://uqam.ca">Site web de l&apos;UQ&Agrave;M</a>
+
+      <strong>Bonjour le monde</strong>
+
+      <em><strong>Bonjour le monde</strong></em>
+
+      <!-- un lien interne -->
+      <!-- &hellip; est une entité qui représente les points de suspension... -->
+      <a href="#bq2">voir plus bas&hellip;</a>
+
+    </p>
+
+    <!-- un paragraphe de texte -->
+    <p>1.sdfkjhsdf     
+      dsfkjhsdf sdfkjhsdfkjsdhf sdfkjh .</p><p>2.sdfkjhsdf dsfkjhsdf sdfkjhsdfkjsdhf sdfkjh .</p>
+
+    <!-- une liste non-ordonnée -->
+    <ul>
+      <li>premier item</li>
+      <li>second item</li>
+      <li>3ieme item</li>
+      <!-- une sous-liste -->
+      <ul>
+        <li>3.1 ieme</li>
+      </ul>
+    </ul>
+
+    <!-- une liste ordonnée -->
+    <ol>
+      <li>premier item</li>
+      <li>second item</li>
+      <li>3ieme item</li>
+    </ol>
+
+    <!-- une règle horizontale -->
+    <hr>
+    
+    <!-- une liste de définitions -->
+    <dl>
+      <dt>mot</dt>
+      <dd>le mot est un mot...</dd>
+      <dt>autre mot</dt>
+      <dd>l'autre mot est aussi un mot...</dd>
+    </dl>
+
+    <hr>
+    
+    <!-- d'autres titres de section -->
+    <h2>Grand titre</h2>
+    <h6>Grand titre</h6>
+
+    <!-- une citation -->
+    <!-- &nbsp; est une "entité" qui représente une espace insécable" -->
+    <blockquote>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &eacute;
+      &egrave;
+      &euml;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    In vitae justo a metus dapibus ullamcorper non sit amet nisl. Donec in
+    condimentum mi. Donec a efficitur eros.
+    <!-- trois sauts de ligne inconditionels -->
+    <br> 
+    <br> 
+    <br> 
+    Sed enim mauris, lacinia sit amet
+    ligula quis, condimentum rhoncus enim. Vivamus efficitur massa commodo
+    semper ultricies. Suspendisse aliquam enim mauris, elementum facilisis
+    neque.
+    </blockquote>
+
+    <!-- un bloc de texte préformatté. TOUS les espaces (whitespace) sont préservés -->
+    <pre>
+    public static void main (String... args) {
+      System.out.println("Hello, Wordl!");
+    }
+    </pre>
+
+
+
+
+
+
+
+    <!-- une citation avec un identifiant unique -->
+    <blockquote id="bq2">
+      <p>     2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    In vitae justo a metus dapibus ullamcorper non sit amet nisl. Donec in
+    condimentum mi. Donec a efficitur eros.
+      </p>
+      <p>Sed enim mauris, lacinia sit amet
+    ligula quis, condimentum rhoncus enim. Vivamus efficitur massa commodo
+    semper ultricies. Suspendisse aliquam enim mauris, elementum facilisis
+    neque.</p>
+    </blockquote>
+
+
+
+
+
+
+
+
+    <!-- nouveaux éléments HTML5 -->
+
+    <main></main>
+
+    <nav></nav>
+
+    <section></section>
+
+    <article></article>
+
+    <header></header>
+    <footer></footer>
+
+    <aside></aside>
+
+    <figure></figure>
+
+    <figure>
+      <img src="https://www.actualites.uqam.ca/sites/default/files/styles/16x9/public/coul_uqam_logement_benoit_tardif_lores1.jpg?itok=yPUFxTOQ" alt="Bonjour">
+      <caption>Une image...</caption>
+    </figure>
+  </body>
+</html>

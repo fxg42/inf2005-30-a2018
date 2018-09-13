@@ -1,0 +1,30 @@
+HTTP
+
+protocole requête-réponse
+  client demande qqchose
+  serveur répond
+
+protocole synchrone
+  client attend pendant que serveur répond
+
+protocole "sans-état"
+  serveur ne se souvient des appels précédents du client
+
+Requête HTTP:
+  verbe|méthode:
+    GET (lecture, répétable)
+    POST (écriture, création, non-répétable)
+    PUT (écriture, remplacement, rép)
+    DELETE: (suppression, rép)
+  Adresse URL
+
+  ...contenu...
+
+Réponse HTTP
+  code de statut
+    200-299: OK
+    300-399: redirection
+    400-499: erreur client
+    500-599: erreur serveur
+
+  ...contenu...
