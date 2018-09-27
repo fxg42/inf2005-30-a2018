@@ -5,5 +5,54 @@
   </head>
   <body>
     <h1>Formulaires</h1>
+    <!--
+      Envoyer un formulaire génère et envoi une requete HTTP.
+      La méthode HTTP et l'URL sont déterminées par les attributs du form
+    -->
+    <form method="GET" action="/">
+      <div>
+        <!-- Champ texte avec une valeur par défaut -->
+        <input type="text" name="username" value="Bonjour le monde!">
+      </div>
+      <div>
+        <!-- Champ caviardé -->
+        <input type="password" name="pw">
+      </div>
+      <div>
+        <!-- boites à cocher dont une pré-cochée -->
+        <!-- 'value' indique la valeur qui sera envoyée au serveur.
+          Si pas présent, la valeur "on" est envoyée -->
+        <input type="checkbox" name="lundi" value="lundi" checked>
+        <input type="checkbox" name="mardi" value="mardi">
+      </div>
+      <div>
+        <!-- cases à cocher mutuellement exclusives.
+          l'attribut "name" détermine le groupe d'exclusivité.
+          l'attribut "value" fonctionne comme pour les checkbox -->
+        <input type="radio" name="ouiounon" value="OUI" checked>
+        <input type="radio" name="ouiounon" value="YES">
+        <input type="radio" name="ouiounon" value="SI">
+      </div>
+      <div>
+        <!-- menu déroulant. Le premier item est toujours sélectionné.
+          l'attribut selected change ce comportement par défaut.
+          l'attribut "value" fonctionne comme pour les checkbox -->
+        <select name="jourdelasemaine">
+          <option value="1">Lundi</option>
+          <option value="2">Mardi</option>
+          <option value="3" selected>Mercredi</option>
+          <option value="4">Jeudi</option>
+          <option value="5">Vendredi</option>
+        </select>
+      </div>
+      <div>
+        <!-- boite de texte multilignes -->
+        <textarea name="description">
+        </textarea>
+      </div>
+
+      <!-- Crée un bouton qui envoi le formulaire -->
+      <input type="submit" value="Ouvrir la session">
+    </form>
   </body>
 </html>

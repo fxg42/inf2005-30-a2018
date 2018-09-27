@@ -29,10 +29,10 @@ $commande = [
         <?php
           $sousTotal = 0.0;
         ?>
-        <?php foreach($commande as $item): ?>
+        <?php foreach($commande as $ligneCommande): ?>
           <?php
-            $produit = $catalogue[$item["sku"]];
-            $prix = $item["qte"] * $produit["prixUnitaire"];
+            $produit = $catalogue[$ligneCommande["sku"]];
+            $prix = $ligneCommande["qte"] * $produit["prixUnitaire"];
             $sousTotal += $prix;
           ?>
           <tr>

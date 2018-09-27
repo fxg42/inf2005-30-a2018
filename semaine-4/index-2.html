@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Semaine 4</title>
+  </head>
+  <body>
+    <h1>Formulaires 2</h1>
+    <form method="POST" action="/">
+      <fieldset>
+        <legend>Choix de cours</legend>
+        <div>
+          <!-- l'attribut for doit correspondre à l'attribut id du champ -->
+          <label for="idsigle">Sigle du cours</label>
+          <input id="idsigle" type="text" name="sigle">
+        </div>
+        <div>
+          <label for="iagreeid">I agree
+            <input id="iagreeid" type="checkbox" name="iagree" checked>
+          </label>
+        </div>
+        <div>
+          <fieldset>
+            <label>A<input type="radio" name="lettrepreferee" value="a"></label>
+            <label>B<input type="radio" name="lettrepreferee" value="b"></label>
+          </fieldset>
+        </div>
+      </fieldset>
+      <!-- un button submit envoie le formulaire, un reset réinitialise le formulaire -->
+      <button type="submit"><strong>ENVOYER</strong></button>
+      <button type="reset"><strong>RESET</strong></button>
+      <button><strong>RIEN</strong></button>
+    </form>
+  </body>
+</html>

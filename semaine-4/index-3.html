@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Semaine 4</title>
+  </head>
+  <body>
+    <h1>Formulaires 3</h1>
+    <form method="POST" action="/">
+
+      <!-- l'attribut pattern fait de la validation dans le fureteur avec un expression régulière -->
+      <div>
+        <input type="text" name="name" pattern="a*">
+      </div>
+      
+      <!-- les champs cachés sont envoyés au serveur. Ils servent à conserver l'état de l'application -->
+      <input type="hidden" name="mdp" value="s3cret!">
+
+      <!-- permet de choisir des fichiers pour les téléverser -->
+      <input type="file" name="piecejointe">
+
+      <!-- HTML5... -->
+      <input type="email" name="email">
+      <input type="tel" name="email">
+
+      <input type="date">
+      <input type="color">
+      <input type="number" min="10" max="15">
+
+      <button type="submit">GO</button>
+    </form>
+  </body>
+</html>
