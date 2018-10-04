@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // les inputs "preferences" sont lues dans un array.
   $preferencesChoisies = $_POST['preferences'] ?? [];
 
-  // On valide que la valeur de l'aeroport choisi est vraiment dans la tableau
+  // On valide que la valeur de l'aeroport choisi est vraiment dans le tableau
   // de valeurs possibles. Sinon, on ajoute un message d'erreur.
   if (! array_key_exists($aeroportChoisi, $aeroports)) {
     $erreurs[ ] = "le code d'aeroport choisi est invalide";
@@ -67,7 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- On génère dynamiquement la liste de checkbox de préférences -->
         <?php foreach ($preferences as $code => $desc): ?>
           <label><?= $desc ?>
-            <!-- Si le code fait parties des valeurs préalablement choisies, on coche le checkbox -->
+            <!-- L'ajout de "[]" à la fin du nom "preferences[]" fait en sorte que PHP mettra les valeurs cochées dans un tableau nommé "preferences" -->
+            <!-- Si le code fait partie des valeurs préalablement choisies, on coche le checkbox -->
             <input type="checkbox"
                    name="preferences[]"
                    value="<?= $code ?>"
