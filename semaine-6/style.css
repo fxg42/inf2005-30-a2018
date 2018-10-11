@@ -1,0 +1,67 @@
+html {
+  font-size: 0.875em; /* 14/16px */
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(44,47,50);
+  color: white;
+  line-height: 2;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+nav {
+  display: none;
+}
+
+main article h2 {
+  text-transform: uppercase;
+  border-bottom: 1px solid grey;
+}
+
+#syllabus p { /* 1, 0, 1 */
+  font-style: italic;
+}
+
+main article h2 ~ * {
+  padding-left: 2em;
+}
+
+article table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+article table th {
+  background-color: rgb(44,47,50);
+  color: white;
+  text-align: left;
+}
+
+article table tbody tr:nth-child(even) {
+  background-color: lightgrey;
+}
+
+article table tbody td,
+article table thead th {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+article table th:first-child,
+article table td:first-child {
+  padding-left: 0.5em;
+}
+
+footer {
+  display: none;
+}
