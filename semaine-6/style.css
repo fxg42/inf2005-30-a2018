@@ -1,67 +1,114 @@
-html {
-  font-size: 0.875em; /* 14/16px */
+:root { /* sélecteur à la racine du document. idem à "html" */
+  font-size: 0.875em; /* La taille par défaut est habituellement 16px. Ici on la change pour 14/16px */
   font-family: Helvetica, Arial, sans-serif;
+  --brand-color: rgb(51,54,57); /* déclaration d'une variable */
 }
-
 body {
   margin: 0;
 }
-
 header {
-  background-color: rgb(44,47,50);
+  background-color: var(--brand-color);
   color: white;
-  line-height: 2;
+  padding-left: 2em;
+  line-height: 2; /* La hauteur de la ligne est donnée relativement à la hauteur de la police */
 }
-
-h1 {
-  margin-top: 0;
-  margin-bottom: 0;
+header h1 {
+  margin: 0;
   text-transform: uppercase;
 }
 
 nav {
-  display: none;
+  width: calc(20% - 2em); /* calcul dynamique de la largeur de la colonne */
+  box-sizing: border-box; /* le calcul box-sizing est plus intuitif dans la majorité des cas */
+  float: left;
+}
+nav ul {
+  list-style-type: none; /* une liste sans puces */
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  line-height: 3;
+}
+nav a {
+  display: inline-block;
+  width: 100%; /* Le lien occupe toute la largeur */
+  text-decoration: none; /* et n'a pas de soulignement */
+  color: inherit; /* on utilise la couleur héritée du contenant */
+  font-weight: bold;
+}
+nav a:before { /* décoration pour les liens */
+  content: "  #";
+  display: inline-block;
+  width: 2em;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+nav a:hover { /* sélecteur lorsque la souris survole l'élément */
+  color: white;
+  background-color: var(--brand-color);
 }
 
+main {
+  width: 80%;
+  box-sizing: border-box;
+  float: right;
+  margin-bottom: 3em;
+}
 main article h2 {
   text-transform: uppercase;
   border-bottom: 1px solid grey;
 }
-
-#syllabus p { /* 1, 0, 1 */
+main article ~ article > h2 { /* sélection les titres des articles qui ne sont pas le premier article */
+  margin-top: 2em;
+}
+#syllabus p {
   font-style: italic;
 }
-
-main article h2 ~ * {
+main article h2 ~ * { /* sélectionne tous les éléments qui viennent après le titre */
   padding-left: 2em;
 }
-
+article ul {
+  list-style-position: inside;
+}
 article table {
   width: 100%;
-  border-spacing: 0;
+  border-spacing: 0; /* pas de place pour les bordures */
 }
-
-article table th {
-  background-color: rgb(44,47,50);
-  color: white;
+article thead tr {
   text-align: left;
 }
-
-article table tbody tr:nth-child(even) {
-  background-color: lightgrey;
+article th {
+  padding: 0.5em 0em;
+  background-color: var(--brand-color);
+  color: white;
 }
-
-article table tbody td,
-article table thead th {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+article tbody tr:nth-child(even) td { /* sélectionne les td des ligne paires */
+  background-color: #eee;
 }
-
-article table th:first-child,
-article table td:first-child {
+article tbody td {
+  padding: 0.5em 0;
+}
+article th:first-child,
+article td:first-child { /* sélectionne le premier td et th de chaque tr */
   padding-left: 0.5em;
 }
 
 footer {
-  display: none;
+  clear: both; /* le footer se fait ainsi pousser sous le contenu flotté à gauche et le contenu flotté à droite */
+  background-color: var(--brand-color);
+}
+footer article {
+  width: 33%;
+  box-sizing: border-box;
+  float: left;
+  color: rgb(106, 109, 113);
+  padding: 3em;
+}
+
+/* truc nommé 'clearfix' pour ajouter un élément à la fin du footer. ceci fait en sorte que les 3 colonnes semblent avoir la même hauteur. */
+footer:after { 
+  content: "";
+  clear: both;
+  display: table;
 }
