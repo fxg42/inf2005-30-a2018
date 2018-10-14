@@ -1,0 +1,72 @@
+[
+    {
+        "anneeParution": 2015,
+        "auteurs": "Lockhart, Josh",
+        "editeur": "O'Reilly Media",
+        "edition": null,
+        "id": 1,
+        "isbn": "9781491905012",
+        "sousTitre": "New Features and Good Practices",
+        "supports": [
+            "kindle",
+            "epub"
+        ],
+        "titre": "Modern PHP"
+    },
+    {
+        "anneeParution": 2016,
+        "auteurs": "Sklar, David",
+        "editeur": "O'Reilly Media",
+        "edition": null,
+        "id": 2,
+        "isbn": "9781491933572",
+        "sousTitre": "A Gentle Introduction to the Web's Most Popular Language",
+        "supports": [
+            "kindle"
+        ],
+        "titre": "Learning PHP"
+    },
+    {
+        "anneeParution": 2018,
+        "auteurs": "Grant, Keith J.",
+        "editeur": "Manning Publications",
+        "edition": null,
+        "id": 3,
+        "isbn": "9781617293450",
+        "sousTitre": null,
+        "supports": [
+            "kindle",
+            "pdf"
+        ],
+        "titre": "CSS in Depth"
+    },
+    {
+        "anneeParution": 2018,
+        "auteurs": "Walls, Craig",
+        "editeur": "Manning Publications",
+        "edition": 5,
+        "id": 4,
+        "isbn": "9781617294945",
+        "sousTitre": null,
+        "supports": [
+            "kindle",
+            "pdf",
+            "papier"
+        ],
+        "titre": "Spring in Action"
+    },
+    {
+        "anneeParution": 2018,
+        "auteurs": "Kurt, Will",
+        "editeur": "Manning Publications",
+        "edition": null,
+        "id": 6,
+        "isbn": "9781617293764",
+        "sousTitre": null,
+        "supports": [
+            "kindle",
+            "papier"
+        ],
+        "titre": "Get Programming with Haskell"
+    }
+]
