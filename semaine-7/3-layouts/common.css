@@ -1,0 +1,52 @@
+:root {
+  font-size: 0.875em;
+  font-family: Helvetica;
+  color: white;
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+body * + * {
+  margin-top: 0;
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+header {
+  background-color: rgb(76,87,98);
+}
+header h1 {
+  margin: 0;
+  padding: 1em;
+}
+nav {
+  background-color: rgb(181,188,195);
+  padding: 0 1em;
+}
+nav > h1 {
+  font-size: 1rem;
+}
+section > section {
+  background-color: white;
+  color: rgb(62,67,71);
+  padding: 0 1em;
+}
+aside {
+  background-color: rgb(150,156,166);
+  padding: 0 1em;
+}
+aside > h1 {
+  font-size: 1rem;
+}
+footer {
+  background-color: rgb(46,51,51);
+  color: rgb(150,156,166);
+}
+footer > article {
+  padding: 0 1em;
+}
+

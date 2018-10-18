@@ -1,0 +1,30 @@
+main > section {
+  display: grid;
+  grid-template-columns: 1fr 4fr 80px;
+}
+footer {
+  display: flex;
+}
+footer > article {
+  flex: 1;
+}
+
+
+
+
+
+/* Tagging pour l'exemple en classe */
+header {
+  position: relative;
+}
+header::after {
+  content: "GRID \00D7  FLEXBOX";
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+

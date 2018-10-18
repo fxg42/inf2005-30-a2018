@@ -1,0 +1,47 @@
+/* missing 'common' properties */
+section {
+  background-color: white;
+  color: rgb(62,67,71);
+  padding: 0 1em;
+}
+
+/* grid */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 80px;
+}
+
+header {
+  grid-row: 1;
+  grid-column: 1 / span 3;
+}
+
+footer {
+  grid-row: 3;
+  grid-column: 1 / span 3;
+
+  display: flex;
+}
+
+footer > article {
+  flex: 1;
+}
+
+
+
+
+
+/* Tagging pour l'exemple en classe */
+header {
+  position: relative;
+}
+header::after {
+  content: "GRID v2 \00D7  FLEXBOX";
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}

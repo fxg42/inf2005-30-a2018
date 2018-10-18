@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+p {
+  margin: 0;
+}
+body {
+  margin: 0;
+  font: bold 14px "Helvetica Neue";
+  color: white;
+}
+main {
+  background-color: gray;
+}
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+section {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-color: deeppink;
+}
+</style>
+</head>
+<body>
+  <main>
+    <h1>CONTENU</h1>
+    <section>FLOATED</section>
+  </main>
+</body>
+</html>

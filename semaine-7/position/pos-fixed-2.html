@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>POSITION FIXED</title>
+    <style type="text/css">
+      div {
+        margin: 10px;
+        background-color: gray;
+        width: 50px;
+        height: 50px;
+        font: bold 24px "Helvetica Neue";
+        line-height: 50px;
+        text-align: center;
+        color: white;
+      }
+      .positioned {
+        background-color: deeppink;
+        position: fixed;
+        width: initial;
+        top: 30px;
+        left: 20%;
+        right: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">1</div>
+    <div id="div2" class="positioned">2</div>
+    <div id="div3">3</div>
+  </body>
+</html>

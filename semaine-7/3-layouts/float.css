@@ -1,0 +1,56 @@
+nav {
+  width: calc(0.2 * (100% - 80px));
+  float: left;
+}
+main > section > section {
+  width: calc(0.8 * (100% - 80px));
+  float: left;
+}
+
+/* Hack "On True Layout" pour donner l'impression que les 3 colonnes sont de la même hauteur... */
+main > section > * {
+  padding-bottom: 99999px;
+  margin-bottom: -99999px;
+}
+main > section {
+  overflow: hidden;
+}
+/* fin */
+
+aside {
+  width: 80px;
+  float: right;
+}
+footer {
+  clear: both;
+}
+footer > article {
+  width: 33.33333%;
+  float: left;
+}
+
+/* Hack "Clearfix" pour faire en sorte que l'élément footer contienne ses éléments */
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* fin */
+
+
+
+
+
+/* Tagging pour l'exemple en classe */
+header {
+  position: relative;
+}
+header::after {
+  content: "FLOAT";
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}

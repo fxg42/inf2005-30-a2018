@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>POSITION ABSOLUTE</title>
+    <style type="text/css">
+      body > div {
+        background-color: lightgray;
+        position: relative;
+        padding: 10px;
+      }
+      div > div {
+        margin: 10px;
+        background-color: gray;
+        width: 50px;
+        height: 50px;
+        font: bold 24px "Helvetica Neue";
+        line-height: 50px;
+        text-align: center;
+        color: white;
+      }
+      .positioned {
+        background-color: deeppink;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="div1">1</div>
+      <div id="div2" class="positioned">2</div>
+      <div id="div3">3</div>
+    </div>
+  </body>
+</html>

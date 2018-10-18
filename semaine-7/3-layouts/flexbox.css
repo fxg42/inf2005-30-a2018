@@ -1,0 +1,40 @@
+header > h1 {
+  margin: 0;
+}
+main > section {
+  display: flex;
+}
+nav {
+  flex: 1;
+}
+aside {
+  flex: 0 0 80px;
+}
+main > section > section {
+  flex: 4;
+}
+footer {
+  display: flex;
+}
+footer > article {
+  flex: 1;
+}
+
+
+
+
+
+/* Tagging pour l'exemple en classe */
+header {
+  position: relative;
+}
+header::after {
+  content: "FLEXBOX";
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+
