@@ -1,6 +1,6 @@
 <?php
 require 'ouvrages.php';
-use function Ouvrages\{findAll, findById, replace, create, remove};
+use function Ouvrages\{findAll, findById, replace, create, removeById};
 
 //
 // Lecture de tous les ouvrages.

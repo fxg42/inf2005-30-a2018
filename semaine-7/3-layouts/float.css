@@ -7,7 +7,7 @@ main > section > section {
   float: left;
 }
 
-/* Hack "On True Layout" pour donner l'impression que les 3 colonnes sont de la même hauteur... */
+/* Hack "One True Layout" pour donner l'impression que les 3 colonnes sont de la même hauteur... */
 main > section > * {
   padding-bottom: 99999px;
   margin-bottom: -99999px;
