@@ -1,0 +1,10 @@
+h1 {
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 900;
+}
+h1.succes::after {
+  content: '👍';
+}
+h1.echec::after {
+  content: '👎';
+}
