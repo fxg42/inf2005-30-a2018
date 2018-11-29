@@ -1,0 +1,98 @@
+:root {
+  font-size: 0.875em;
+  font-family: 'Helvetica';
+}
+
+body {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+    "search search"
+    "collection details";
+  grid-column-gap: 2em;
+}
+
+#search {
+  grid-area: search;
+  margin-bottom: 2em;
+}
+
+#search input {
+  border: 1px solid rgba(34,36,38,.15);
+  font-size: 1rem;
+  border-radius: .28571429rem;
+  line-height: 1.21428571em;
+  box-sizing: border-box;
+  padding: 1em;
+  width: 100%;
+  box-shadow: 0 0 0 0 transparent inset;
+  transition: color .1s ease,border-color .1s ease;
+}
+
+#userCollection {
+  grid-area: collection;
+}
+
+#userCollection ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#userCollection li {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "avatar login"
+    "avatar summary";
+  grid-column-gap: 1em;
+  padding: 1em;
+  cursor: pointer;
+  position: relative;
+}
+
+#userCollection li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#userCollection li.selected {
+  background-color: rgba(0,0,0, 0.05);
+}
+
+#userCollection li img {
+  width: 50px;
+  border-radius: 25px;
+  grid-area: avatar;
+}
+
+#userCollection li h1 {
+  grid-area: login;
+  margin: 0;
+}
+
+#userCollection li p {
+  grid-area: summary;
+  margin: 0;
+}
+
+#userDetails {
+  grid-area: details;
+}
+
+#userDetails h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+#userDetails .location::before {
+  content: "🌎 ";
+}
+
+#userDetails .company::before {
+  content: "🏢 ";
+}
+
+#userDetails .joinedon::before {
+  content: "📅 ";
+}

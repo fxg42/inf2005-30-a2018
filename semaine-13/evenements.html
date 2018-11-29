@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Evt</title>
+    <style>
+      section {
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(255, 0, 0, 0.25);
+        padding: 5em;
+        box-sizing: border-box;
+        position: relative;
+      }
+      section::after {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        color: white;
+        font: bold 14px Helvetica;
+        text-transform: uppercase;
+      }
+      #section-1::after { content: "section-1"; }
+      #section-2::after { content: "section-2"; }
+      #section-3::after { content: "section-3"; }
+      #section-4::after { content: "section-4"; }
+    </style>
+  </head>
+  <body>
+    <section id="section-1">
+      <section id="section-2">
+        <section id="section-3">
+          <section id="section-4">
+          </section>
+        </section>
+      </section>
+    </section>
+    <script type="text/javascript">
+
+      const print = (message) => (evt) => {
+        //evt.stopPropagation();
+        console.log(message, 'target is', evt.target);
+      }
+
+      document.querySelector('#section-1').addEventListener('click', print('capturing in 1'), true);
+      document.querySelector('#section-1').addEventListener('click', print('bubbling in 1'));
+      document.querySelector('#section-2').addEventListener('click', print('capturing in 2'), true);
+      document.querySelector('#section-2').addEventListener('click', print('bubbling in 2'));
+      document.querySelector('#section-3').addEventListener('click', print('capturing in 3'), true);
+      document.querySelector('#section-3').addEventListener('click', print('bubbling in 3'));
+      document.querySelector('#section-4').addEventListener('click', print('capturing in 4'), true);
+      document.querySelector('#section-4').addEventListener('click', print('bubbling in 4'));
+    </script>
+  </body>
+</html>
