@@ -5,7 +5,8 @@
 - Structures de données JS: objects {}, Array : []
 - "Truthy" vs "Falsy"
 - == vs ===
-- les fonctions sont des expressions...
+
+### Les fonctions sont des expressions
 
     const x = 12;
     const f = () => {}
@@ -13,12 +14,11 @@
 
 ## Ajax
 
-- async/await fetch
-
     const resp = await fetch(url);
-    const json = await resp.json();
-    const contenuTexte = await resp.text();
-    const binaire = await resp.blob();
+
+    const json = await resp.json(); // le contenu est du JSON
+    const contenuTexte = await resp.text(); // le contenu est du texte
+    const binaire = await resp.blob(); // le contenu est du binaire
 
 ## DOM
 
